@@ -1,1 +1,38 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>/</loc><lastmod>2018-11-14T19:02:50-07:00</lastmod></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2018-11-14T19:02:50-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>/notes/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/tag1/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/tag2/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>/categories/tools/</loc>
+  </url>
+  
+  <url>
+    <loc>/notes/vscode/</loc>
+  </url>
+  
+</urlset>
