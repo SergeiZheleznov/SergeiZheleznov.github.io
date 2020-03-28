@@ -1,6 +1,5 @@
 +++
 title = "Hi!"
-draft = false
 [menu.main]
   weight = -500
   name = "Index"

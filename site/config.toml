@@ -4,6 +4,12 @@ languageLang = "en"
 title = "Hi!"
 enableEmoji = true
 
+
+buildDrafts = false
+buildExpired = false
+buildFuture = false
+verbose = true
+
 [taxonomies]
   category = "categories"
   tag = "tags"

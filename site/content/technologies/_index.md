@@ -1,6 +1,7 @@
 +++
 title = "Technology Stack"
 menu = "main"
+
 [_build]
   render = true
 
