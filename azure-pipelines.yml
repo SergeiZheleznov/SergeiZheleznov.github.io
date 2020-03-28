@@ -1,28 +1,31 @@
 trigger:
-- hugo
+  - hugo
 
 parameters:
-  - name: 'hugo_version'
-    displayName: 'Hugo Version'
-    type: string
-    default: '0.68.3'
+- name: 'hugo_version'
+  displayName: 'Hugo Version'
+  type: string
+  default: '0.68.3'
 
 pool:
   name: Azure Pipelines
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: wget https://github.com/gohugoio/hugo/releases/download/v${{ parameters.hugo_version }}/hugo_${{ parameters.hugo_version }}_Linux-64bit.deb -O '$(Pipeline.Workspace)/hugo_${{ parameters.hugo_version }}_Linux-64bit.deb'
-  displayName: Download Hugo v${{ parameters.hugo_version }} Linux x64
+- script: wget https://github.com/gohugoio/hugo/releases/download/v${{ parameters.hugo_version }}/hugo_${{ parameters.hugo_version }}_Linux-64bit.deb -O '$(Pipeline.Workspace)/hugo_${{ parameters.hugo_version }}_Linux-64bit.deb'
+  displayName: Download Hugo v${{ parameters.hugo_version }} Linux x64
 
-- script: sudo dpkg -i $(Pipeline.Workspace)/hugo*.deb
-  displayName: Install Hugo
+- script: sudo dpkg -i $(Pipeline.Workspace)/hugo*.deb
+  displayName: Install Hugo
+  
+- script: 'npm install'
+  displayName: 'npm install'
 
-- script: 'npm install'
-  displayName: npm install
+- script: npm run build:webpack
+  displayName: 'creating bundles with webpack'
 
-- script: npm run build:webpack
-  displayName: creating bundles with webpack
+- script: hugo -d ../dist -s site -v
+  displayName: 'generating static content'
 
-- script: hugo -d ../dist -s site -v
-  displayName: generating static content
+- script: npm run deploy
+  displayName: Deploying solution
