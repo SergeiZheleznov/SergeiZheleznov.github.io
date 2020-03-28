@@ -21,7 +21,7 @@ steps:
 - script: 'npm install'
   displayName: 'npm install'
 
-- script: 'npm run eslint'
+- script: 'npm run lint'
   displayName: 'run lint'
 #- script: npm run build:webpack
 #  displayName: 'creating bundles with webpack'
