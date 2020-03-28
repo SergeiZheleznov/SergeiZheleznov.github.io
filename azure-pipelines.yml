@@ -21,11 +21,13 @@ steps:
 - script: 'npm install'
   displayName: 'npm install'
 
-- script: npm run build:webpack
-  displayName: 'creating bundles with webpack'
+- script: 'npm run eslint'
+  displayName: 'run eslint'
+#- script: npm run build:webpack
+#  displayName: 'creating bundles with webpack'
 
-- script: hugo -d ../dist -s site -v
-  displayName: 'generating static content'
+#- script: hugo -d ../dist -s site -v
+#  displayName: 'generating static content'
 
-- script: npm run deploy
-  displayName: Deploying solution
+#- script: npm run deploy
+#  displayName: Deploying solution
