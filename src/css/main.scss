@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
+
+
+body {
+    font-family: 'Fira Sans';
+}
+
+::selection {
+    background-color: #aaa;
+    color:#fff;
+}
+
+.md-content {
+    h1 {
+        @apply text-xl;
+        @apply text-gray-800;
+    }
+    h2 {
+        @apply text-lg;
+        @apply font-bold;
+        @apply mb-4;
+    }
+    h3 {
+        @apply uppercase;
+    }
+    p {
+        @apply mb-2;
+    }
+    a {
+        @apply underline;
+        @apply text-purple-600;
+    }
+}

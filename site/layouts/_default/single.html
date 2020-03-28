@@ -1,0 +1,27 @@
+{{ define "main" }}
+<div class="container max-w-2xl mx-auto my-10">
+  <div class="bg-white p-10 rounded-md">
+
+    {{ $taxo := "categories" }}
+    <ul class="font-bold text-xs list-none">
+      <li class="inline-block"><a href="{{ .Site.BaseURL }}">Index</a></li>
+      <li class="md:inline-block px-2 sm:hidden">&CenterDot;</li>
+        {{ range .Param $taxo }}
+            {{ $name := . }}
+            {{ with $.Site.GetPage (printf "/%s/%s" $taxo ($name | urlize)) }}
+                <li class="inline-block">{{ $name }}</li>
+            {{ end }}
+        {{ end }}
+        <li class="md:inline-block px-2 sm:hidden">&CenterDot;</li>
+        <li class="inline-block">{{ .Title }}</li>
+    </ul>
+    <hr class="my-5" />
+
+    <div class="md-content">
+      {{- .Content -}}
+    </div>
+
+
+  </div>
+</div>
+{{ end }}
