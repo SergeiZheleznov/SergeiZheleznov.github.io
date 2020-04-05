@@ -1,16 +1,16 @@
-import {library, dom} from "@fortawesome/fontawesome-svg-core";
+import {library, dom} from '@fortawesome/fontawesome-svg-core';
 import {
   faBoxOpen,
   faEnvelope,
   faLink
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons';
 import {
   faFacebook,
   faGithub,
   faGithubAlt,
   faInstagram,
   faLinkedinIn
-} from "@fortawesome/free-brands-svg-icons";
+} from '@fortawesome/free-brands-svg-icons';
 
 library.add(
   faFacebook,
