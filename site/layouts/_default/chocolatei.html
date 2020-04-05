@@ -4,17 +4,17 @@
 
     <h2 class="text-3xl mb-4">DevTools</h2>
     {{ range .Params.devtools.package }}
-      {{ partial "software-item" . }}
+      {{ partial "software.item" . }}
     {{ end }}
 
     <h2 class="text-3xl mb-4 mt-6">Utils</h2>
     {{ range .Params.utils.package }}
-      {{ partial "software-item" . }}
+      {{ partial "software.item" . }}
     {{ end }}
 
     <h2 class="text-3xl mb-4 mt-6">Multimedia</h2>
     {{ range .Params.multimedia.package }}
-      {{ partial "software-item" . }}
+      {{ partial "software.item" . }}
     {{ end }}
 
   </div>

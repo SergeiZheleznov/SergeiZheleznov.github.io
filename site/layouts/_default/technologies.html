@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="max-w-3xl lg:ml-5 mt-5 lg:mt-0">
+  <div class="bg-white px-6 py-4 rounded-md">
+    {{ range .Params.section }}
+      {{ $currentSection := .}}
+      <div class="mt-5">
+        <h3 class="mb-2 text-2xl font-semibold">{{.name}}</h3>
+        {{ range .element }}        
+          {{ partial "technology.item" . }}
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

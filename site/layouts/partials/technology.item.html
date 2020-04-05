@@ -1,0 +1,6 @@
+<div class="mb-1 mr-1 py-1 px-3 cursor-default rounded-full inline-block bg-gray-500 hover:bg-gray-900 transform duration-200 text-white text-sm">
+  {{.name}}
+  {{ with .url }}
+    <a class="text-xs ml-2" rel="nofollow" target="_blank" href="{{.}}"><i class="fas fa-link"></i></a>
+  {{end}}
+</div>
