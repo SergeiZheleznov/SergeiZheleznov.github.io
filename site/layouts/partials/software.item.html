@@ -1,4 +1,4 @@
-<div class="mb-3">
+<div x-show="isShow('{{.choco}}')" class="mb-3">
   <h3 class="text-lg font-semibold">
     {{.name}}
     {{ if .choco }}<a class="text-sm text-gray-700 hover:text-gray-900" href="https://chocolatey.org/packages/{{.choco}}/" target="_blank"><i class="fas fa-box-open"></i></a>{{ end }}
