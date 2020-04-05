@@ -1,1 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Technology Stack on Hi!</title><link>/technologies/</link><description>Recent content in Technology Stack on Hi!</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="/technologies/index.xml" rel="self" type="application/rss+xml"/><item><title>C#</title><link>/technologies/c-sharp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/technologies/c-sharp/</guid><description/></item><item><title>JavaScript</title><link>/technologies/javascript/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/technologies/javascript/</guid><description/></item><item><title>Laravel</title><link>/technologies/laravel/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/technologies/laravel/</guid><description/></item><item><title>php</title><link>/technologies/php/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/technologies/php/</guid><description/></item><item><title>Typescript</title><link>/technologies/typescript/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/technologies/typescript/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Technology Stack on Hi!</title>
+    <link>/technologies/</link>
+    <description>Recent content in Technology Stack on Hi!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/technologies/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
