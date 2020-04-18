@@ -1,4 +1,4 @@
-const chocolateiFilter = () => {
+const chocolateyFilter = () => {
   return ({
     filterStr: '',
     isShow(string) {
@@ -10,4 +10,4 @@ const chocolateiFilter = () => {
   });
 };
 
-export default chocolateiFilter;
+export default chocolateyFilter;
