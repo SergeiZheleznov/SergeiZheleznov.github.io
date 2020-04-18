@@ -1,6 +1,6 @@
 +++
-title = "Chocolatei packages"
-layout = "chocolatei"
+title = "Chocolatey packages"
+layout = "chocolatey"
 menu = "main"
 [devtools]
   [[devtools.package]]
@@ -31,6 +31,10 @@ menu = "main"
     name = "Postman"
     choco = "postman"
     www = "https://www.postman.com/"
+  [[devtools.package]]
+    name = "Fiddler"
+    choco = "fiddler"
+    www = "https://www.telerik.com/fiddler"
 [utils]
   [[utils.package]]
     name = "7-Zip"
