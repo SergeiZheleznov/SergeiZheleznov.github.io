@@ -3,9 +3,9 @@ module.exports = {
     extend: {},
   },
   variants: {
-   borderColor: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
+    borderColor: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
   },
   plugins: [
     require('@tailwindcss/ui'),
   ],
-}
+};
