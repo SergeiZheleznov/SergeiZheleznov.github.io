@@ -35,6 +35,10 @@ menu = "main"
     name = "Fiddler"
     choco = "fiddler"
     www = "https://www.telerik.com/fiddler"
+  [[devtools.package]]
+    name = "Hugo"
+    choco = "hugo-extended"
+    www = "https://gohugo.io/"
 [utils]
   [[utils.package]]
     name = "7-Zip"
