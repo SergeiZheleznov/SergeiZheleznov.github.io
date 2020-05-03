@@ -39,6 +39,11 @@ menu = "main"
     name = "Hugo"
     choco = "hugo-extended"
     www = "https://gohugo.io/"
+  [[devtools.package]]
+    name = "Python"
+    choco = "python3"
+    www = "https://www.python.org/"
+
 [utils]
   [[utils.package]]
     name = "7-Zip"
@@ -48,6 +53,10 @@ menu = "main"
     name = "WinSCP"
     choco = "winscp"
     www = "https://winscp.net/"
+  [[utils.package]]
+    name = "Screen To Gif"
+    choco = "screentogif"
+    www = "https://www.screentogif.com/"
   [[utils.package]]
     name = "Microsoft PowerToys"
     choco = "powertoys"
