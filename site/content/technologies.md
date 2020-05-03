@@ -72,15 +72,13 @@ name = "Flow"
 name = "PowerApps"
 
 [[section]]
-name = "Adobe"
+name = "UI/UX"
+[[section.element]]
+name = "Figma"
+[[section.element]]
+name = "Adobe XD"
 [[section.element]]
 name = "InDesign"
-[[section.element]]
-name = "Photoshop"
-[[section.element]]
-name = "Illustrator"
-[[section.element]]
-name = "XD"
 
 [[section]]
 name = "Backend"
