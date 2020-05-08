@@ -27,4 +27,4 @@ jobs:
         hugo-version: '0.68.3'
         # extended: true
     - name: Build
-      run: hugo --minify
+      run: hugo -d ../dist -s site -v --minify
