@@ -14,20 +14,14 @@ jobs:
         node-version: [12.x]
 
     steps:
-
-    - run: wget https://github.com/gohugoio/hugo/releases/download/v${{ env.hugo_version }}/hugo_${{ env.hugo_version }}_Linux-64bit.deb -O '${{ env.GITHUB_WORKSPACE }}/hugo_${{ env.hugo_version }}_Linux-64bit.deb'
-      name: Download Hugo v${{ env.hugo_version }} Linux x64
-      env:
-        hugo_version: 0.68.3
-
-    - run: sudo dpkg -i ${{env.GITHUB_WORKSPACE}}/hugo*.deb
-      name: Install Hugo
-          
+         
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-    - run: npm run build
+    - run: npm run build:webpack
+    - name: Build Site
+      uses: chabad360/hugo-actions@master
   
