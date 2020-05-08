@@ -1,0 +1,33 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ hugo ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x]
+
+    steps:
+
+    - run: wget https://github.com/gohugoio/hugo/releases/download/v${{ hugo_version }}/hugo_${{ hugo_version }}_Linux-64bit.deb -O '${{ GITHUB_WORKSPACE }}/hugo_${{ hugo_version }}_Linux-64bit.deb'
+      name: Download Hugo v${{ hugo_version }} Linux x64
+      env:
+        hugo_version: 0.68.3
+
+    - run: sudo dpkg -i ${{GITHUB_WORKSPACE}}/hugo*.deb
+      name: Install Hugo
+          
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm run build
+  
