@@ -15,8 +15,8 @@ jobs:
 
     steps:
 
-    - run: wget https://github.com/gohugoio/hugo/releases/download/v${{ hugo_version }}/hugo_${{ hugo_version }}_Linux-64bit.deb -O '${{ GITHUB_WORKSPACE }}/hugo_${{ hugo_version }}_Linux-64bit.deb'
-      name: Download Hugo v${{ hugo_version }} Linux x64
+    - run: wget https://github.com/gohugoio/hugo/releases/download/v${{ env.hugo_version }}/hugo_${{ env.hugo_version }}_Linux-64bit.deb -O '${{ GITHUB_WORKSPACE }}/hugo_${{ env.hugo_version }}_Linux-64bit.deb'
+      name: Download Hugo v${{ env.hugo_version }} Linux x64
       env:
         hugo_version: 0.68.3
 
