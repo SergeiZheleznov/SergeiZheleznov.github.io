@@ -72,7 +72,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "gh-pages": "^2.2.0",
     "node-sass": "^4.13.1",
-    "tailwindcss": "^1.2.0",
+    "tailwindcss": "1.4.5",
     "terser-webpack-plugin": "^2.3.5"
   }
 }
