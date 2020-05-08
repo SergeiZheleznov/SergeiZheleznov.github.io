@@ -1,5 +1,5 @@
 +++
-title = "Hello"
+title = "Hi!"
 [menu.main]
   weight = -500
   name = "Index"
