@@ -26,5 +26,20 @@ library.add(
 export default {
   loadFontAwesome: () => {
     dom.watch();
+  },
+  initChoco: async(el) => {
+    window.chocolateyFilter = function() {
+      return ({
+        filterStr: '',
+        isShow(string) {
+          if (!this.filterStr) {
+            return true;
+          }
+          return !!string.toLowerCase().includes(this.filterStr.toLowerCase());
+        }
+      });
+    };
+    el.setAttribute('x-data', 'chocolateyFilter()');
+    await import(/* webpackChunkName: "alpinejs" */ 'alpinejs');
   }
 };
