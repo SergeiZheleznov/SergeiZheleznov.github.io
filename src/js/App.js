@@ -40,6 +40,6 @@ export default {
       });
     };
     el.setAttribute('x-data', 'chocolateyFilter()');
-    await import(/* webpackChunkName: "alpinejs" */ 'alpinejs');
+    await require(/* webpackChunkName: "alpinejs" */ 'alpinejs');
   }
 };

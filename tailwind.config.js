@@ -1,4 +1,11 @@
+const path = require('path');
 module.exports = {
+  purge: {
+    enabled: true,
+    content: [
+      path.join(__dirname, 'site/layouts/', '**/*.html')
+    ]
+  },
   theme: {
     extend: {},
   },
