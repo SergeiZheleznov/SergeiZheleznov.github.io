@@ -6,7 +6,7 @@ const AssetsPlugin = require('assets-webpack-plugin');
 
 module.exports = {
   entry: {
-    main: path.join(__dirname, 'src', 'index.js')
+    main: path.join(__dirname, 'src', 'index.ts')
   },
 
   output: {
@@ -22,6 +22,11 @@ module.exports = {
       {
         test: /\.json$/,
         loader: 'json-loader'
+      },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
       },
       {
         loader: 'babel-loader',
@@ -41,6 +46,9 @@ module.exports = {
         ]
       }
     ]
+  },
+  resolve: {
+    extensions: [ '.tsx', '.ts', '.js' ],
   },
   plugins: [
     new webpack.ProvidePlugin({
