@@ -43,6 +43,10 @@ menu = "main"
     name = "Python"
     choco = "python3"
     www = "https://www.python.org/"
+  [[devtools.package]]
+    name = "Deno"
+    choco = "deno"
+    www = "https://deno.land/"
 
 [utils]
   [[utils.package]]
