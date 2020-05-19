@@ -1,12 +1,10 @@
 import './css/main.scss';
+import App from './js/App';
 
 window.addEventListener('DOMContentLoaded', async(event) => {
-  const {default: App} = await require(/* webpackChunkName: "app" */ './js/App');
   App.loadFontAwesome();
-
   const el = document.getElementById('choco-filter');
   if (el) {
     await App.initChoco(el);
   }
-
 });

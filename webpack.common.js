@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+// const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const AssetsPlugin = require('assets-webpack-plugin');
 
@@ -29,12 +29,6 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        loader: 'babel-loader',
-        test: /\.js?$/,
-        exclude: /node_modules/,
-        /*query: {cacheDirectory: true}*/
-      },
-      {
         test: /\.(sa|sc|c)ss$/,
         exclude: /node_modules/,
         use: [
@@ -59,13 +53,13 @@ module.exports = {
       path: path.join(process.cwd(), 'site/data'),
       prettyPrint: true
     }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: './src/fonts/',
-          to: 'fonts/',
-          flatten: true,
-        }
-      ]})
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     {
+    //       from: './src/fonts/',
+    //       to: 'fonts/',
+    //       flatten: true,
+    //     }
+    //   ]})
   ]
 };
