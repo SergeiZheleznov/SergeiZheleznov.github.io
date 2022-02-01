@@ -1,0 +1,25 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site",
+  "author": "Sergei Zheleznov",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "^2.0.0",
+    "@mdx-js/react": "^2.0.0",
+    "gatsby": "^4.6.1",
+    "gatsby-source-filesystem": "^4.6.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
