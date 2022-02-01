@@ -1,16 +1,13 @@
 module.exports = {
-  siteMetadata: {
-    title: `Site`,
-    siteUrl: `https://www.yourdomain.tld`,
-  },
+  // Since `gatsby-plugin-typescript` is automatically included in Gatsby you
+  // don't need to define it here (just if you need to change the options)
   plugins: [
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-plugin-twind`,
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        config: `./twind.config.js`,
       },
-      __key: "pages",
     },
+    'gatsby-plugin-react-helmet',
   ],
 };
