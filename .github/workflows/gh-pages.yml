@@ -1,6 +1,5 @@
 name: Gatsby Publish
 
-name: Build and Deploy
 on: [push]
 jobs:
   build-and-deploy:
