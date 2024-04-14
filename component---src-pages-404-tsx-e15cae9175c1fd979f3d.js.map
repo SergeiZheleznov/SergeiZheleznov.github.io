@@ -1,1 +1,0 @@
-{"version":3,"file":"component---src-pages-404-tsx-e15cae9175c1fd979f3d.js","mappings":"yIAQA,UANiB,kBACf,4BACE","sources":["webpack://gatsby-website/./src/pages/404.tsx"],"sourcesContent":["import React from 'react';\n\nconst NotFound = () => (\n  <main>\n    <p>Sorry, page not found!</p>\n  </main>\n);\n\nexport default NotFound;\n"],"names":[],"sourceRoot":""}
