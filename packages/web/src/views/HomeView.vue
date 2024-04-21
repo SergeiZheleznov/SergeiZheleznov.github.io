@@ -1,18 +1,20 @@
 <script setup lang="ts">
-import { useAuthStore } from '@/stores/auth'
-import { ref } from 'vue'
-const authStore = useAuthStore()
+import { ref, onMounted } from 'vue'
+import { supabase } from '../utils/supabase'
+const posts = ref<any[] | null>([])
 
-const userName = ref('')
-const password = ref('')
+const getPosts = async () => {
+  let { data, error } = await supabase.from('posts').select('*')
+  posts.value = data
+  console.log({ posts, error })
+}
+
+onMounted(async () => {
+  await getPosts()
+})
 </script>
 
 <template>
-  <main>HomeView {{ JSON.stringify(authStore.user) }}</main>
-
-  <form @submit.prevent>
-    <input v-model="userName" type="text" />
-    <input v-model="password" type="password" />
-    <button @click="() => authStore.authenticate(userName, password)" />
-  </form>
+  <main>HomeView</main>
+  {{ JSON.stringify(posts) }}
 </template>

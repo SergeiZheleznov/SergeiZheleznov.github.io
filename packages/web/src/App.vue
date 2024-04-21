@@ -1,35 +1,26 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import { ref, onMounted } from 'vue'
+import { AppRoute } from '@/router'
+import { onMounted } from 'vue'
+import { useAuthStore } from '@/stores/auth'
 
-import { supabase } from './utils/supabase'
-const posts = ref<any[] | null>([])
-
-async function getTodos() {
-  let { data, error } = await supabase.from('posts').select('*')
-  posts.value = data
-  console.log({ posts, error })
-  //countries.value = posts
-}
-
+const { getSession, user } = useAuthStore()
 onMounted(async () => {
-  await getTodos()
+  await getSession()
 })
 </script>
 
 <template>
   <header>
-    {{ JSON.stringify(posts) }}
-
     <div class="wrapper">
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink :to="AppRoute.index">Home</RouterLink>
       </nav>
     </div>
   </header>
 
   <RouterView />
+  {{ JSON.stringify(user) }}
 </template>
 
 <style scoped></style>
