@@ -26,10 +26,13 @@ const router = createRouter({
 })
 
 router.beforeEach(async (to) => {
-  const { user } = useAuthStore()
+  console.log('beforeEach')
+  const authStore = useAuthStore()
+
+  !authStore.user && (await authStore.getSession())
 
   const publicPages = [AppRoute.account.login] as string[]
-  if (!user && !publicPages.includes(to.path)) {
+  if (!authStore.user && !publicPages.includes(to.path)) {
     return AppRoute.account.login
   }
 })

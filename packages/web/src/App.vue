@@ -1,13 +1,9 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import { AppRoute } from '@/router'
-import { onMounted } from 'vue'
 import { useAuthStore } from '@/stores/auth'
 
-const { getSession, user } = useAuthStore()
-onMounted(async () => {
-  await getSession()
-})
+const authStore = useAuthStore()
 </script>
 
 <template>
@@ -15,12 +11,13 @@ onMounted(async () => {
     <div class="wrapper">
       <nav>
         <RouterLink :to="AppRoute.index">Home</RouterLink>
+        <button v-if="authStore.user" @click="authStore.signOut">SignOut</button>
       </nav>
     </div>
   </header>
 
   <RouterView />
-  {{ JSON.stringify(user) }}
+  =={{ JSON.stringify(authStore.user) }}==
 </template>
 
 <style scoped></style>
