@@ -1,9 +1,18 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import { useAuthStore } from '@/stores/auth'
+import { ref } from 'vue'
+const authStore = useAuthStore()
+
+const userName = ref('')
+const password = ref('')
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <main>HomeView {{ JSON.stringify(authStore.user) }}</main>
+
+  <form @submit.prevent>
+    <input v-model="userName" type="text" />
+    <input v-model="password" type="password" />
+    <button @click="() => authStore.authenticate(userName, password)" />
+  </form>
 </template>
