@@ -10,7 +10,7 @@ const authStore = useAuthStore()
   <header>
     <div class="wrapper">
       <nav>
-        <RouterLink :to="AppRoute.index">Home</RouterLink>
+        <RouterLink :to="AppRoute.index">/</RouterLink>
         <button v-if="authStore.user" @click="authStore.signOut">SignOut</button>
       </nav>
     </div>
